@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android='http://schemas.android.com/apk/res/android'
+    android:layout_width='fill_parent'
+    android:layout_height='fill_parent'
+    android:orientation='vertical'
+    android:padding='20sp'
+    android:paddingTop='20sp' 
+    android:background="@color/GhostWhite"
+    >
+
+    <EditText
+        android:id="@+id/pessoa_dc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Nome "
+        android:inputType="text"
+        android:padding="@dimen/size_imforme_items"
+        android:paddingTop="@dimen/size_imforme_items" />
+
+    <requestFocus />
+
+    <EditText
+        android:id="@+id/pessoa_valor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        android:padding="@dimen/size_imforme_items"
+        android:paddingTop="@dimen/size_imforme_items" />
+
+    <EditText
+        android:id="@+id/pessoa_sobre"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Sobre"
+        android:inputType="text"
+        android:padding="@dimen/size_imforme_items"
+        android:paddingTop="@dimen/size_imforme_items" />
+
+    <EditText
+        android:id="@+id/pessoa_data_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Data Inicial"
+        android:inputType="date"
+        android:padding="@dimen/size_imforme_items"
+        android:paddingBottom="@dimen/size_imforme_items"
+        android:paddingTop="@dimen/size_imforme_items" />
+
+    <EditText
+        android:id="@+id/pessoa_data_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Data Final"
+        android:inputType="date"
+        android:padding="@dimen/size_imforme_items"
+        android:paddingBottom="@dimen/size_imforme_items"
+        android:paddingTop="@dimen/size_imforme_items" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:text="Pago" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/pessoa_btn_cancel"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="cancelar" />
+
+        <Button
+            android:id="@+id/pessoa_btn_ok"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Ok" />
+
+    </RelativeLayout>
+
+</LinearLayout>
