@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 public class Conta_activity extends Activity {
@@ -34,8 +35,8 @@ public class Conta_activity extends Activity {
 			final EditText data_start = (EditText) alertDialog
 					.findViewById(R.id.pessoa_data_start);
 			
-			final EditText pago_condi = (EditText) alertDialog.findViewById(R.id.pessoa_data_end);
-			final Boolean pago = !pago_condi.getText().toString().equals("");
+			final CheckBox pago_condi = (CheckBox) alertDialog.findViewById(R.id.pessoa_pagou);
+			final Boolean pago = !pago_condi.isChecked();
 			
 			Button btnok = (Button) alertDialog
 					.findViewById(R.id.pessoa_btn_ok);
@@ -47,7 +48,7 @@ public class Conta_activity extends Activity {
 				@Override
 				public void onClick(View v) {
 					alertDialog.dismiss();
-					main.contadao.AddConta(nome.getText().toString(), sobre.getText().toString(), valor.getText().toString(), data_start.getText().toString(), data_end.getText().toString(), pago);
+					main.contadao.AddConta(new Conta_info_item(0,nome.getText().toString(), sobre.getText().toString(), data_start.getText().toString(), data_end.getText().toString(), valor.getText().toString(), pago));
 					main.showMsg("Adicionado com Sucesso.");
 					main.refreshConta();
 				}

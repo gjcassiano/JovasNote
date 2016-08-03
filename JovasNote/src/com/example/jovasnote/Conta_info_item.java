@@ -10,11 +10,11 @@ public class Conta_info_item {
 	private Boolean pago;
 	
 	
-	public Conta_info_item(int id ,String nome, String sobre, String date_start,String date_end,String valor ,Boolean pago) {
+	public Conta_info_item( int id,String nome, String sobre, String date_start,String date_end,String valor ,Boolean pago) {
 		this.nome=nome;
 		this.sobre = sobre;
-		this.setDate_start(date_start);
-		this.setDate_end(date_end);
+		this.date_start = date_start;
+		this.date_end = date_end;
 		this.pago = pago;
 		this.valor = valor;
 		this.id = id;
@@ -65,9 +65,6 @@ public class Conta_info_item {
 	}
 
 	public String getDate_end() {
-		if(date_end.equals("")){
-			return " em aberto";
-		}
 		return date_end;
 	}
 

@@ -67,7 +67,7 @@
         android:paddingTop="@dimen/size_imforme_items" />
 
     <CheckBox
-        android:id="@+id/checkBox1"
+        android:id="@+id/pessoa_pagou"
         android:layout_width="273dp"
         android:layout_height="wrap_content"
         android:text="Pago" />

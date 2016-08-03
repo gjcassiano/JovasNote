@@ -10,11 +10,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
@@ -35,7 +37,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		contadao = new ContaDAO(this);
+	
 		vibrate = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
 
 
@@ -43,11 +45,12 @@ public class MainActivity extends Activity {
 		customadapter = new CustomAdapter(this, itemList);
 
 		ListView lv = (ListView) findViewById(R.id.lista_items);
-
-		lv.setAdapter(customadapter);
+		contadao = new ContaDAO(this);
+		//lv.setAdapter(customadapter);
 		
 		
 		refreshConta();
+		
 //		lv.setClickable(true);
 //		lv.setFocusable(false);
 //		lv.setFocusableInTouchMode(false);
@@ -55,6 +58,7 @@ public class MainActivity extends Activity {
 		// vibrate.vibrate(200);
 		//Intent i = new Intent(this,Conta_info_item.class);
 		//this.startActivity(i);
+		
 		
    }
 		
