@@ -58,7 +58,7 @@ public class ContaDAO extends SQLiteOpenHelper{
 			String data_start = c.getString(4);
 			String data_end = c.getString(5);
 			boolean pago = c.getString(6).equals("1");
-			contexts.itemList.add(new Conta_info_item(id,nome, sobre, data_start +" - " +data_end, valor, pago));
+			contexts.itemList.add(new Conta_info_item(id,nome, sobre, data_start, data_end, valor, pago));
 			
 		}
 	}
