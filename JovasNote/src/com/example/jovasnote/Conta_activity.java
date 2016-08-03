@@ -44,7 +44,10 @@ public class Conta_activity extends Activity {
 					.findViewById(R.id.pessoa_btn_cancel);
 		
 			btnok.setOnClickListener(new View.OnClickListener() {
-
+				
+				
+				
+				
 				@Override
 				public void onClick(View v) {
 					alertDialog.dismiss();
